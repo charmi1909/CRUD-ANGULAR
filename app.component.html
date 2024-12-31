@@ -1,0 +1,35 @@
+<h1 style="text-align: center;">CRUD Operations</h1>
+
+<div class="form-group">
+  
+  <input type="Name" class="form-control" id="exampleInputName1"  placeholder="Enter Student Name" [(ngModel)]="stuname">
+  <button type="button" style="align-content: center;"class="btn btn-secondary" (click)="addStudent()">{{isEditable==-1?"Add Student":"Edit Student"}}</button>
+
+  
+  
+
+
+
+
+
+</div>
+
+
+<table class="table">
+  <thead class="thead-dark">
+    <tr>
+      <th scope="col" style="text-align: center;" >Student Name</th>
+      <th scope="col" style="text-align: center;">Actions</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let temp of name;let i=index">
+      <td>{{temp}}</td>
+      <td><input type="button" value="Delete" class="btn-danger" (click)="deletestudent(i)" ></td>
+      <td><input type="button" value="Edit" class="btn-secondary" (click)="selectIndex(i)"></td>
+    </tr>
+
+   
+    
+  </tbody>
+</table>
